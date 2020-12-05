@@ -1,0 +1,11 @@
+<div class="form-group">
+  <label for="file">Choose File</label>
+  <input type="file"
+         id="file"
+         accept=".jpg, .jpeg, .png"
+         (change)="selectFile($event)">
+  <button [disabled]="!selectedFiles" (click)="upload()">
+    Upload
+  </button>
+  <img id="input image" length="500" height="500">
+</div>
