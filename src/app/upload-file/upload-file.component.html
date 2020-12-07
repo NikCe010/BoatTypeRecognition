@@ -1,11 +1,11 @@
-<div class="form-group">
-  <label for="file">Choose File</label>
+<div class="input-div">
   <input type="file"
+         class="custom-file-input"
          id="file"
          accept=".jpg, .jpeg, .png"
          (change)="selectFile($event)">
-  <button [disabled]="!selectedFiles" (click)="upload()">
+  <button mat-raised-button [disabled]="!selectedFiles" (click)="upload()">
     Upload
   </button>
-  <img id="input image" length="500" height="500">
 </div>
+<img id="input image" length="500" height="500" margin="50px">

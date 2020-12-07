@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 import { UploadFileComponent } from './upload-file/upload-file.component';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { UploadFileComponent } from './upload-file/upload-file.component';
     BrowserAnimationsModule,
     MatSliderModule,
     MatToolbarModule,
+    MatButtonModule,
     MatInputModule
   ],
   providers: [],

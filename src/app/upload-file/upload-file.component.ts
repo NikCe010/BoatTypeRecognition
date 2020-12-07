@@ -35,9 +35,11 @@ export class UploadFileComponent implements OnInit {
     reader.readAsDataURL(this.currentFile);
 
     imgTag = (document.getElementById('input image') as HTMLImageElement);
-    console.log('imageHTML::' + imgTag.src);
 
-    this.classifierService.classify(imgTag);
+    this.classifierService.classify(imgTag).then(r => {
+      const label = this.classifierService.convert(r as Float32Array);
+      console.log(label);
+    });
   }
 
   constructor(private classifierService: ClassifierService) { }
