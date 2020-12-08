@@ -4,8 +4,14 @@
          id="file"
          accept=".jpg, .jpeg, .png"
          (change)="selectFile($event)">
-  <button mat-raised-button [disabled]="!selectedFiles" (click)="upload()">
-    Upload
+  <button mat-raised-button class="upload_button" [disabled]="!selectedFiles" (click)="upload()">
+    Определить
   </button>
 </div>
-<img id="input image" length="500" height="500" margin="50px">
+<div id="input_photo" class="input-photo" hidden="true">
+  <h2>Загруженное изображение:</h2>
+  <img id="input image" class="input_image" length="500" height="500" margin="50px">
+</div>
+<div id="result" class="result" hidden="true">
+  <h2 id="result_content"></h2>
+</div>

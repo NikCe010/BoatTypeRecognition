@@ -26,9 +26,11 @@ export class UploadFileComponent implements OnInit {
     const reader = new FileReader();
 
     let imgTag = (document.getElementById('input image') as HTMLImageElement);
+    const imgDiv = (document.getElementById('input_photo') as HTMLDivElement);
     imgTag.title = this.currentFile.name;
 
     reader.onload = event => {
+      imgDiv.hidden = false;
       imgTag.src = (event.target.result as string);
     };
 
@@ -38,7 +40,10 @@ export class UploadFileComponent implements OnInit {
 
     this.classifierService.classify(imgTag).then(r => {
       const label = this.classifierService.convert(r as Float32Array);
-      console.log(label);
+      const resultDivTag = (document.getElementById('result') as HTMLDivElement);
+      const resultTag = document.getElementById('result_content') as HTMLHeadElement;
+      resultDivTag.hidden = false;
+      resultTag.textContent = 'Похоже на ' + label;
     });
   }
 
