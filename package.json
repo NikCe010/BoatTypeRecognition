@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -30,8 +31,8 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1001.2",
-    "@angular/cli": "~10.1.2",
-    "@angular/compiler-cli": "~10.1.2",
+    "@angular/cli": "^11.0.4",
+    "@angular/compiler-cli": "^10.1.6",
     "@tensorflow/tfjs": "^2.7.0",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
