@@ -9,9 +9,7 @@ export class ClassifierService {
   constructor() { }
 
   async loadModelTf(): Promise<LayersModel> {
-    console.log('туть');
-    const model = await tf.loadLayersModel('https://boat-type-recogn.herokuapp.com/');
-    console.log(model);
+    const model = await tf.loadLayersModel('https://boat-type-recogn.herokuapp.com/model.json');
     return model;
   }
 
