@@ -9,7 +9,9 @@ export class ClassifierService {
   constructor() { }
 
   async loadModelTf(): Promise<LayersModel> {
-    const model = await tf.loadLayersModel('http://127.0.0.1:4200/api/model.json');
+    console.log('туть');
+    const model = await tf.loadLayersModel('http://127.0.0.1:8080/model.json');
+    console.log(model);
     return model;
   }
 
